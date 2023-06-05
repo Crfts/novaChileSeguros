@@ -1,0 +1,50 @@
+  {% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href='{% static "css/yuto copy 3.css" %}'>
+    <meta charset="utf-8">
+    <title>Cotiza Aquí</title>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <header>  
+  {% block content %}
+  <div class="navbar">
+    <div class="logo"><a href=""><H1>Nova Chile Seguros</H1></a></div>
+    <ul class="link">
+        <li><a href="admin/">Admin</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/">cotizador</a></li>
+        <li><a href="/menuForm">Formulario</a></li>
+    </ul>
+  </div>
+  {% endblock %}
+  </header>
+    
+  <form action="precios/" method="post"> 
+    {% csrf_token %}
+    <div class="Container-patente" id="patente">
+      <h1>Ingresa Tu Patente</h1>
+      <div class="patente">
+        {{ form.patente }}
+      </div>
+      <button  class="boton" type="button"  id="botonPatente"   onclick="paso()">Siguiente</button>
+    </div>
+    <div class="container" id="cor">
+      <div  class="select-box">
+        <h1>Cotiza tu auto aquí</h1>
+        <h5>Marca</h5>
+        {{ form.marca }}
+        <h5>Modelo</h5>
+        {{ form.modelo }}
+        <h5>Año</h5>
+        {{ form.ano }}
+        <button type="submit">Cotizar</button>
+      </div>
+    </div>
+  </form>
+  <script type="text/javascript" src="{% static 'js/rot copy 8.js' %}">
+
+  </script>
+  </body>
+</html>

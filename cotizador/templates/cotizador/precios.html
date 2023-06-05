@@ -1,0 +1,108 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href='{% static "css/precio2 copy 5.css" %}'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrusel</title>
+</head>
+<body>
+    <h1>
+        
+    </h1>
+    <div class="bloque">
+        <div class="filtro">
+
+            <div class="categorias">
+                <h1>Ordenar Por</h1>
+                <select name="ordenar" id="ordernar">
+                    <option value="" selected>Menor Precio</option>
+                    <option value="">Mayor Precio</option>          
+                </select>
+            </div>
+
+            <div class="categorias">
+                <h1>Compañias</h1>
+                <div class="desc">
+                    {% for yut in lol %}
+                    <div>
+                        <input type="checkbox"> {{yut.nombre_compania}}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="categorias">
+                <h1>Promocion</h1>
+                <div class="desc">
+                    <input type="checkbox"> Oferta Especial
+                </div> 
+            </div>
+
+            <div class="categorias">
+                <h1>Productos</h1>
+                <div class="desc">
+                    {% for x in productos %}
+                        <div>
+                            <input type="checkbox"> {{x.nombre_producto}}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="categorias">
+                <h1>Deducibles</h1>
+                <div class="desc">
+                    {% for x in deducible %}
+                        <div>
+                            <input type="checkbox"> {{x.valor_deducible}} UF
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="categorias2">
+                <div class="botones">
+                    <button type="button" class="boton" onclick="limpiar()">Limpiar Filtros</button>
+                    <button type="button" class="boton" onclick="filtrar()">Filtrar</button>
+                </div>
+            </div>      
+        </div>
+        <div class="productos">
+            <center><h1>{{marca}} {{modelo}} {{ano}}</h1></center>
+            {% for x in posts %}
+                <div class="card">
+                    <div class="card_header"> 
+                        <center>
+                            {{x.compania_id_compania.nombre_compania}}
+                            Deducible {{x.deducible_id_deducible.valor_deducible}} Uf 
+                        </center>
+                    </div>
+                    <div class="card_info">
+                        <div class="info_center">
+                            <div class="left">
+                                left
+                            </div>
+                            <div class="right">
+                                right
+                            </div>
+                        </div>
+                        <form action="comprar" method="GET">
+                            <input type="hidden" name="seguro_id" value="{{ x.id_cotizacion }}">
+                            <button type="submit">Contratar</button>
+                        </form>
+                        
+                        
+                    </div>
+                    <div class="card_footer">
+                        hola
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/rot copy 4.js' %}"></script>
+</body>
+</html>

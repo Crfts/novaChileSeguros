@@ -1,0 +1,193 @@
+*{
+    
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    background-color: #34495e;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.25s;
+    
+    
+}
+
+
+a:hover{
+    color: orange;
+    
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color:  #3498db;
+}
+.navbar{
+    
+    width: 100%;
+    height: 80px;
+    max-width: 1200PX;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.navbar .link{
+    display: flex;
+    gap: 2rem;
+}
+
+.container{
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10PX;
+    color: #fff;
+    visibility: hidden;
+    
+    
+}
+.container2{
+    margin-top: 45  px;
+    width: 500px;
+    padding: 40px;
+    padding-top: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10PX;
+    color: #fff;
+    visibility: hidden;
+
+  
+}
+.Container-patente{
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10PX;
+    color: #fff;
+    visibility: visible;
+    
+}
+.select-box h1{
+    color: #FFF;
+    margin-bottom: 25PX;
+}
+.select-box button{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2PX solid #3498db;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    border-radius: 24px;
+    color: aliceblue;
+    transition: 0.25s;
+    cursor: pointer;
+    font-weight: 1000;
+
+}
+.select-box button:hover{
+    background-color:  #3498db;
+}
+
+select{
+    width: 100%;
+    border-radius: 15PX;
+    padding: 15px;
+    -webkit-appearance: none;
+    appearance: NONE;   
+    color: aliceblue;
+    background: none;
+    font-weight: 800;
+    transition: 0.25s;
+
+}
+select:focus{
+    background-color:  #3498db;
+    border-radius: 0;
+    border: none;
+}
+option{
+    padding-top: 40px;
+    background-color: #3498db;
+    font-weight: 800;
+}
+input{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0% auto;
+    text-align: center;
+    border: 2PX solid #3498db;
+    padding: 14px 10px;
+    width: 100%;    
+    outline: none;
+    border-radius: 15px;
+    color: aliceblue;
+    transition: 0.25s;
+    
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input:focus{
+    border-radius: 0;
+    color:  #3498db;
+}
+h5{     
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+.patente{
+    padding-top: 15px;
+}
+.boton{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2PX solid #3498db;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    border-radius: 24px;
+    color: aliceblue;
+    transition: 0.25s;
+    cursor: pointer;
+    font-weight: 1000;
+}
+.boton:hover{
+    background-color:  #3498db;
+}
