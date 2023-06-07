@@ -132,6 +132,8 @@ class ValorCotizacion(models.Model):
     
 
 class Cotizante(models.Model):
-    nombre = models.CharField(max_length= 30)
-    ap_pat = models.CharField(max_length= 30)
-    ap_mat = models.CharField(max_length=30)
+    Rut =  models.CharField(max_length= 12)
+    Nombre = models.CharField(max_length= 30)
+    Apellido_paterno = models.CharField(max_length= 30)
+    Apellido_materno = models.CharField(max_length=30)
+    Correo = models.EmailField(max_length=50)

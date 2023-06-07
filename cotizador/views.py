@@ -21,6 +21,7 @@ def mostrarPrecios(request):
         return redirect('main')
     
 def comprar(request):
-    seguro_id = request.POST.get('seguro_id')
+    seguro_id = request.GET.get('seguro_id')
+    posts = ValorCotizacion.objects.filter(id_cotizacion = seguro_id).first()
     form = CotizanteForm()
-    return render(request, 'cotizador/comprar.html', {'form' : form ,'seguro_id' : seguro_id })
+    return render(request, 'cotizador/comprar.html', {'form' : form ,'seguro_id' : seguro_id, 'posts': posts  })

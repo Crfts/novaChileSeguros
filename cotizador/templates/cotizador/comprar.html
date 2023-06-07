@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href='{% static "css/comprar.css" %}'>
+    <link rel="stylesheet" href='{% static "css/comprar copy 2.css" %}'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    contratar seguro {{seguro_id}}
     <center>
         <div class="caja">
+            <h1>Ingresa Tus Datos Personales</h1>
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
@@ -20,7 +20,9 @@
         </div>
         <div class="caja">
             precios del seguro
-        </div>
+            <br>
+            contratar seguro {{seguro_id}}
+            {{posts.valor_inicial}}
     </center>
         
 </body>
